@@ -2,7 +2,7 @@ Attribute VB_Name = "IPI_Paul_Excel_MS_Edge"
 Sub AuthorRepository()
     Dim browser As Object
     
-    Set browser = CreateObject("ExcelWebView2Wrapper.WebViewHost")
+    Set browser = CreateObject("IPIExcelWebView2Wrapper.WebViewHost")
     browser.Show
     browser.AuthorRepository
 End Sub
@@ -10,7 +10,7 @@ End Sub
 Sub LoadHtml(frm As FormView, Optional html As String = "<html><body><h2>Hello from Excel</h2></body></html>", Optional large As Boolean = False)
     Dim browser As Object
     
-    Set browser = CreateObject("ExcelWebView2Wrapper.WebViewHost")
+    Set browser = CreateObject("IPIExcelWebView2Wrapper.WebViewHost")
     
     If frm.Title > "" Or frm.Top > 0 Or frm.Left > 0 Or frm.Width > 0 Or frm.Height > 0 Then
         browser.Show frm.Title, frm.Top, frm.Left, frm.Width, frm.Height
@@ -28,7 +28,7 @@ End Sub
 Sub InjectScript()
     Dim browser As Object
     
-    Set browser = CreateObject("ExcelWebView2Wrapper.WebViewHost")
+    Set browser = CreateObject("IPIExcelWebView2Wrapper.WebViewHost")
     
     browser.Show
     
@@ -39,7 +39,7 @@ End Sub
 Sub NavigateTo(url As String)
     Dim browser As Object
     
-    Set browser = CreateObject("ExcelWebView2Wrapper.WebViewHost")
+    Set browser = CreateObject("IPIExcelWebView2Wrapper.WebViewHost")
     
     browser.Show
     browser.Navigate url
