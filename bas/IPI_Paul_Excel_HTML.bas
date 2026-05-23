@@ -74,7 +74,7 @@ End Sub
 
 Sub viewRepository()
     Dim hWnd As LongPtr, api As LongPtr, Top As Long, Left As Long, Height As Long, Width As Long
-    Const fPath As String = "https://github.com/IPI-Paul/IPI/tree/master/VBA%20Projects/IPI%20Excel%20to%20Web%20Browser%20Line%20Charts"
+    Const fPath As String = "https://github.com/IPI-Paul/IPI-Excel-to-Web-Browser-Line-Map-Charts"
     
     loadApplicationLink WorksheetFunction.VLookup(Range("Browser"), Range("Browsers"), 2, False), "--app=" & fPath
     Sleep Range("Delay").Value
